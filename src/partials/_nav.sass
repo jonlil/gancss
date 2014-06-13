@@ -1,0 +1,42 @@
+//
+// Navigations
+//
+
+// Sidebar navigation
+.sidebar-nav
+    margin: -2rem -3rem 2rem -3rem
+
+    a
+        display: block
+        border-bottom: 1px solid $grey
+        padding: .7rem 3rem .6rem
+        text-transform: uppercase
+        font-size: .8rem
+        font-weight: $bold
+        position: relative
+        transition: .2s background
+
+        &:before
+            content: '\e6c9'
+            position: absolute
+            top: 25%
+            left: 1rem
+            font-family: $icon
+            font-size: 0.9rem
+            color: $grey
+            transition: .2s left
+
+        &:hover
+            background: $grey
+
+        &:hover::before
+            left: -0.6rem
+            color: $grey
+
+    li.active
+        a
+            background: $grey
+
+            &::before
+                left: -0.6rem
+                color: $grey
