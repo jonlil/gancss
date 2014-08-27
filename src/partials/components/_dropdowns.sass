@@ -2,6 +2,7 @@
 // Dropdowns
 //
 
+// Hover dropdowns
 .has-dropdown
     position: relative
 
@@ -44,3 +45,64 @@
 
     li:first-child a
         border-top: 1px solid $light-blue
+
+// Click dropdowns
+.has-btn-dropdown
+    position: relative
+    outline: none
+    display: inline-block
+
+    > a:after
+        content: '\e6ce'
+        font-family: $icon
+        vertical-align: middle
+        padding-left: 0.5rem
+        display: inline-block
+        margin-right: -.5rem
+        line-height: 15px
+
+    &:focus
+
+        pointer-events: none
+
+        > a
+            background: $darker-grey
+            border-radius: $border-radius $border-radius 0 0
+            border-bottom: 1px solid $dark-grey
+
+            &:after
+                content: '\e6cf'
+
+        .btn-dropdown
+            display: block
+            pointer-events: auto
+
+.btn-dropdown
+    display: none
+    position: absolute
+    top: 100%
+    right: 0
+    background: $darker-grey
+    border-radius: $border-radius 0 $border-radius $border-radius
+    z-index: $z-small
+    text-align: left
+
+    a
+        display: block
+        white-space: nowrap
+        width: 100%
+        padding: 0.6rem 0.8rem 0.5rem
+        color: #fff
+        border-bottom: 1px solid $dark-grey
+
+        &:hover
+            background: darken($darker-grey, 5%)
+
+            &:last-child
+                border-radius: 0 0 $border-radius $border-radius
+
+            &:first-child
+                border-radius: $border-radius 0 0 0
+
+        &:last-child
+            border-bottom: none
