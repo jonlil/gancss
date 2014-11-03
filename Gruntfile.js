@@ -3,9 +3,9 @@ module.exports = function(grunt) {
 
         sass: {
             files: {
-                'build/gancss.css': 'src/gancss.sass',
+                'build/gancss.css': 'src/gancss.sass'
             },
-  
+
             prod: {
                 options: {
                     style: 'compressed'
@@ -40,7 +40,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+    grunt.registerTask('copy_fonts', function() {
+        grunt.file.mkdir('build/fonts');
+        grunt.file.copy('src/fonts/icons.ttf', 'build/fonts/icons.ttf');
+        grunt.file.copy('src/fonts/icons.woff', 'build/fonts/icons.woff');
+
+    });
+
     grunt.registerTask('default', ['build', 'watch']);
 
-    grunt.registerTask('build', ['sass:prod', 'autoprefixer:single_file', 'cssmin:prod']);
+    grunt.registerTask('build', ['sass:prod', 'autoprefixer:single_file', 'cssmin:prod', 'copy_fonts']);
 };
