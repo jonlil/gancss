@@ -1,6 +1,36 @@
-//
-// BUTTONS
-//
+/*doc
+---
+title: Buttons
+name: button
+category: Modules
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<button class="btn btnDefault">Click</button>
+<a class="btn btnDefault" href="http://trulia.com">Don't click</a>
+```
+
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+
+##Button Sizes
+There are three 3 sizes for buttons: Large, medium (default)
+and small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with the any of the button
+size and style modifiers.
+
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="btn btnDefault btnLrg">Large</button>              | `btn btnDefault btnLrg`
+<button class="btn btnDefault">Default</button>                   | `btn btnDefault`
+<button class="btn btnDefault btnSml">Small</button>              | `btn btnDefault btnSml`
+<button class="btn btnDefault btnFullWidth">Full width</button>   | `btn btnDefault btnFullWidth`
+*/
 
 .btn, .btn:visited {
   display: inline-block;

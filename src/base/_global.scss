@@ -133,7 +133,6 @@ hr {
 // Appearance
 [class*='col'].box {
   background: $white;
-  border-radius: $border-radius;
   padding: 2rem 2rem 1rem;
   &.border-with-bg {
     background: $lighter-grey;
@@ -201,12 +200,10 @@ hr {
   > .col-8 {
     background: $white;
     width: 67%;
-    border-radius: $border-radius 0 0 $border-radius;
   }
   > .sidebar {
     background: $light-grey;
     width: 33%;
-    border-radius: 0 $border-radius $border-radius 0;
     border-left: 1px solid $grey;
   }
 }

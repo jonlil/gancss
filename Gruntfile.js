@@ -14,18 +14,21 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            options: {
-                livereload: true
+            livereload: {
+                // Here we watch the files the sass task will compile to
+                // These files are sent to the live reload server after sass compiles to them
+                options: { livereload: true },
+                files: ['docs/**/*'],
             },
             css: {
                 files: 'src/**/*.scss',
-                tasks: ['sass', 'autoprefixer'],
+                tasks: ['sass', 'autoprefixer', 'hologram'],
                 options: {
                     spawn: false
                 }
             },
             hologram: {
-                files: ['doc_assets/**/*.html', 'src/**/*.scss'],
+                files: ['doc_assets/**/*.html'],
                 tasks: 'hologram'
             }
         },
@@ -41,13 +44,6 @@ module.exports = function(grunt) {
                 dest: 'build/gancss.css'
             }
         },
-        hologram: {
-            generate: {
-                options: {
-                    config: 'config.yml'
-                }
-            }
-        },
         cssmin: {
             prod: {
                 files: {
@@ -56,14 +52,21 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+        hologram: {
+            generate: {
+                options: {
+                    config: 'config.yml'
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-hologram');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-hologram');
 
     grunt.registerTask('copy_fonts', function() {
         grunt.file.mkdir('build/fonts');

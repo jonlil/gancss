@@ -67,10 +67,6 @@ a, a:visited {
   }
 }
 
-a, a:visited, a:after, a:before {
-  transition: 0.2s all;
-}
-
 a.delete, a.delete:visited {
   color: $red;
 }
