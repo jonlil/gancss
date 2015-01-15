@@ -1,0 +1,60 @@
+//
+// HELPERS
+//
+
+// Layout
+.clearfix {
+  @include clearfix;
+}
+
+.no-mar {
+  margin: 0 !important;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+// Positioning
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.valign-top {
+  vertical-align: top;
+}
+
+// Apperance
+.disabled {
+  opacity: 0.5;
+  &:hover, a:hover {
+    cursor: default !important;
+  }
+}
+
+// Text overflow ellipsis
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

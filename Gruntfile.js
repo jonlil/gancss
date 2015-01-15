@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
         sass: {
             files: {
-                'build/gancss.css': 'src/gancss.sass'
+                'build/gancss.css': 'src/gancss.scss'
             },
 
             prod: {
@@ -18,14 +18,14 @@ module.exports = function(grunt) {
                 livereload: true
             },
             css: {
-                files: 'src/**/*.sass',
+                files: 'src/**/*.scss',
                 tasks: ['sass', 'autoprefixer'],
                 options: {
                     spawn: false
                 }
             },
             hologram: {
-                files: ['doc_assets/**/*.html', 'src/**/*.sass'],
+                files: ['doc_assets/**/*.html', 'src/**/*.scss'],
                 tasks: 'hologram'
             }
         },
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         hologram: {
             generate: {
                 options: {
-                    config: 'hologram_config.yml'
+                    config: 'config.yml'
                 }
             }
         },

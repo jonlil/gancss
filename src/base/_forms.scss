@@ -1,0 +1,239 @@
+//
+// Forms
+//
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="number"],
+textarea {
+    background: $lighter-grey;
+    border: 1px solid $dark-grey;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    padding: 0.6rem 0.8rem 0.5rem;
+    border-radius: $border-radius;
+    transition: 0.3s all;
+    font-size: 0.9rem;
+
+    // States
+    &.error {
+        border: 1px solid $red;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+    }
+
+    &:focus {
+        background: $white;
+        border: 1px solid $blue;
+        outline: 0;
+    }
+
+    &.small {
+        padding: 0.3rem 0.8rem 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.legend {
+    border-bottom: 1px solid $grey;
+    margin: 0 -3rem 1rem;
+
+    h3 {
+        margin: 0 2.5rem -0.7rem;
+
+        strong {
+            background: $white;
+            display: inline-block;
+            padding: 0 0.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+}
+
+// Checkboxes and radio buttons
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-left: 0.3rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    cursor: pointer;
+}
+
+// Select
+select, .choose-date {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none !important;
+    background: $lighter-grey url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjVweCIgaGVpZ2h0PSI0OXB4IiB2aWV3Qm94PSIwIDAgNjUgNDkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY1IDQ5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiM3RDkyQTEiIHdpZHRoPSI2NSIgaGVpZ2h0PSI0OSIvPg0KPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIyOSwyMyAzMi41LDE3IDM2LDIzICIvPg0KPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIzNiwyNyAzMi41LDMzIDI5LDI3ICIvPg0KPC9zdmc+DQo=) 101% 50% no-repeat;
+    background-size: contain;
+    border: 1px solid $dark-grey;
+    margin-bottom: 0.7rem;
+    padding: 0.6rem 3rem 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: $border-radius;
+    cursor: pointer;
+    // Hack to remove native arrow in FF
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: "";
+    &:focus, &:active {
+        outline: 0;
+        border: 1px solid $light-blue;
+    }
+    &.small {
+        padding: 0.3rem 3rem 0.3rem 0.8rem;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+// Textarea
+textarea {
+    min-height: 150px;
+}
+
+// input buttons
+input[type="submit"]:focus,
+button:focus {
+    outline: 0;
+}
+
+// Upload
+.file-upload-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.file-upload-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 43px;
+    direction: ltr;
+    cursor: pointer;
+    height: 36px;
+    line-height: 30px;
+    width: 351px;
+}
+
+// States
+span.error {
+    background: $red;
+    color: $white;
+    display: block;
+    margin-top: -0.85rem;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0 0 $border-radius $border-radius;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    &.small {
+        margin-top: -0.1rem;
+    }
+    &.same-radius {
+        border-radius: $border-radius;
+    }
+}
+
+// Position icons inside input
+.input-wrap {
+    position: relative;
+    input[type="email"].ng-valid,
+    input[type="text"].ng-valid,
+    input[type="password"].ng-valid,
+    input[type="url"].ng-valid {
+        // border: 1px solid $green
+        position: relative;
+    }
+    span.valid, span.invalid, span.append-icon {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.9rem;
+        color: $green;
+        &.invalid {
+            color: $red;
+        }
+    }
+    .has-icon {
+        padding: 0.6rem 0.5rem 0.5rem 2.4rem;
+    }
+    span.prepend-icon {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.9rem;
+    }
+    span.append-icon {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.9rem;
+    }
+}
+
+// Make action button part of input
+.append-btn {
+    display: table;
+    margin-bottom: 0.5rem;
+    position: relative;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="url"],
+    textarea {
+        margin-bottom: 0;
+        border-radius: $border-radius 0 0 $border-radius;
+        display: table-cell;
+        position: relative;
+        margin-bottom: 0;
+        height: 39px;
+        &.small {
+            height: 30px;
+        }
+    }
+    a {
+        display: table-cell;
+        border-radius: 0 $border-radius $border-radius 0;
+        width: 1%;
+        position: relative;
+        height: 38px;
+        padding: 0.6rem 1rem 0.5rem;
+        &.small {
+            height: 29px;
+        }
+    }
+}
+
+// Layout
+.border-with-bg {
+    input, select {
+        background-color: $white;
+    }
+    .legend h3 strong {
+        background: $lighter-grey;
+    }
+}
