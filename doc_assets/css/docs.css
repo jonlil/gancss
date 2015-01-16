@@ -1,23 +1,33 @@
 
 
 
+.styleguide-content > h1:not(:first-child) {
+    margin-top: 7rem;
+    border-top: 1px solid #e5e9ec;
+    padding-top: 5rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding-left: 3rem;
+}
+.styleguide-content > h2 { margin-top: 5rem; }
+
+
+
 
 .codeExample {
-    border: 1px solid #c8d0d6;
     border-radius: 3px;
+    margin-bottom: 1rem;
 }
 
-.exampleOutput,
-.codeBlock {
+.exampleOutput {
     position: relative;
-    padding: 2rem 1rem 1rem;
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid #c8d0d6;
+    border-left: 1px solid #c8d0d6;
+    border-right: 1px solid #c8d0d6;
 }
 
-.exampleOutput { border-bottom: 1px solid #c8d0d6; }
-
-
-.exampleOutput:before,
-.codeBlock:before {
+.exampleOutput:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,4 +41,5 @@
 }
 
 .exampleOutput:before { content: 'Example'; }
-.codeBlock:before     { content: 'Code'; }
+
+.codeBlock pre { border-radius: 0 0 3px 3px; }

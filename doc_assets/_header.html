@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <title>Get a Newsletters styleguide: <%= title %></title>
+        <title>GAN styleguide: <%= title %></title>
         <link rel="stylesheet" href="/build/gancss.css">
         <link rel="stylesheet" href="css/github.css">
         <link rel="stylesheet" href="css/docs.css">
-        <link rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic">
+        <link rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Source+Code+Pro">
     </head>
-    <body>
+    <body class="<%= title %>">
         <div class="site-wrap">
         <header class="site-header clearfix">
             <div class="logo">
@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="row">
-                <h1 class="no-mar">Get a Newsletters styleguide</h1>
+                <h1 class="no-mar"><%= title %></h1>
             </div>
             <section class="row box has-sidebar">
-                <article class="col-8 ng-scope">
+                <article class="col-8 styleguide-content">

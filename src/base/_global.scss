@@ -204,13 +204,14 @@ hr {
   > .sidebar {
     background: $light-grey;
     width: 33%;
-    border-left: 1px solid $grey;
+    border-left: 1px solid $base-grey;
   }
 }
 
-.highlight {
-  background: $yellow;
-}
+// Remove?
+// .highlight {
+//   background: $yellow;
+// }
 
 // Video in modal
 .video-container {

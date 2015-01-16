@@ -6,36 +6,57 @@ category: Modules
 ---
 
 Button styles can be applied to any element. Typically you'll want to
-use either a `<button>` or an `<a>` element:
+use either a `<button>` or an `<a>` element. Buttons next to each other
+is spaced out with the adjacent selector `.btn + .btn`.
 
 ```html_example
-<button class="btn btnDefault">Click</button>
-<a class="btn btnDefault" href="http://trulia.com">Don't click</a>
+<button class="btn primary">Primary</button>
+<a class="btn" href="#">Default</a>
 ```
 
-If your button is actually a link to another page, please use the
-`<a>` element, while if your button performs an action, such as submitting
-a form or triggering some javascript event, then use a `<button>` element.
+## Button sizes
 
-##Button Sizes
-There are three 3 sizes for buttons: Large, medium (default)
-and small. Simply apply the size modifier class for the desired size.
+There are two sizes for buttons: normal and small. Simply apply the size
+modifier class for the desired size.
 There is also an additional modifier that will make the button take the
 full width of the container. It may be used with the any of the button
 size and style modifiers.
 
-Button                                                            | Modifier Class
------------------------------------------------------------------ | -----------------
-<button class="btn btnDefault btnLrg">Large</button>              | `btn btnDefault btnLrg`
-<button class="btn btnDefault">Default</button>                   | `btn btnDefault`
-<button class="btn btnDefault btnSml">Small</button>              | `btn btnDefault btnSml`
-<button class="btn btnDefault btnFullWidth">Full width</button>   | `btn btnDefault btnFullWidth`
+```html_example
+<a class="btn primary" href="#">Primary normal</a>
+<a class="btn" href="#">Default normal</a>
+<a class="btn primary small" href="#">Primary small</a>
+<a class="btn small" href="#">Default small</a>
+```
+
+## Button groups
+
+Button groups is used to add some extra spacing between buttons on the same `.row`.
+
+```html_example
+<div class="btn-group-connected">
+    <input type="radio" value="option1" id="option1">
+    <label for="option1" class="btn small has-tooltip">Option 1</label>
+
+    <input type="radio" value="option2" id="option2">
+    <label for="option2" class="btn small has-tooltip">Option 2</label>
+
+    <input type="radio" value="option3" id="option3">
+    <label for="option3" class="btn small has-tooltip">Option 3</label>
+</div>
+```
+
 */
+
+
+// -------------------------------------------------------------
+// # Button styles
+// -------------------------------------------------------------
 
 .btn, .btn:visited {
     display: inline-block;
     padding: 0.6rem 1.6rem 0.5rem;
-    font-size: 0.9rem;
+    font-size: $font-size-medium;
     font-weight: $semi-bold;
     background: $dark-grey;
     color: white;
@@ -71,16 +92,8 @@ Button                                                            | Modifier Cla
     }
 
     &.small {
-        padding: 0.3rem 0.8rem 0.3rem;
+        padding: 0.3rem 0.8rem 0.25rem;
         vertical-align: middle;
-
-        &.top-mar {
-            margin-top: 0.8rem;
-        }
-    }
-
-    &.beside-input {
-        padding: 0.45rem 1.7rem 0.45rem;
     }
 
     &.active {
@@ -116,46 +129,43 @@ Button                                                            | Modifier Cla
     }
 }
 
-// Button groups
-.btn-group,
-.btn-dropdown-group {
+.btn + .btn { margin-left: 1rem; }
 
-    > .btn,
-    > .has-btn-dropdown {
-        margin-right: 1rem;
-        vertical-align: bottom;
 
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
+// -------------------------------------------------------------
+// # Button groups
+// -------------------------------------------------------------
+
+// Remove?
+// .btn-group,
+// .btn-dropdown-group {
+
+//     > .btn,
+//     > .has-btn-dropdown {
+//         margin-right: 1rem;
+//         vertical-align: bottom;
+
+//         &:last-child {
+//             margin-right: 0;
+//         }
+//     }
+// }
 
 .btn-group-connected {
     font-size: 0;
 
     label {
         margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-right: 1px;
         border-radius: 0;
-        border-top: 1px solid $dark-grey;
-        border-bottom: 1px solid $dark-grey;
-        border-right: 1px solid $dark-grey;
-        background: $lighter-grey;
         line-height: 1.3;
-        color: $black;
-
-        &:hover {
-            background: grey;
-            color: $black;
-        }
 
         &:first-of-type {
             border-radius: $border-radius 0 0 $border-radius;
-            border-left: 1px solid $dark-grey;
         }
 
         &:last-of-type {
+            margin-right: 0 !important;
             border-radius: 0 $border-radius $border-radius 0;
         }
     }
@@ -204,23 +214,5 @@ Button                                                            | Modifier Cla
 // Block buttons
 .block-btn {
     display: block;
-    padding: 1.5rem 2rem 0.7rem;
-    background: $dark-grey;
-    border-radius: $border-radius;
-
-    &:hover {
-        background: $darker-grey;
-        color: white;
-    }
-
-    &.primary {
-        background: $green;
-        &:hover {
-            background: darken($green, 5%);
-        }
-    }
-
-    * {
-        color: white;
-    }
+    // padding: 1.5rem 2rem 0.7rem;
 }

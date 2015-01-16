@@ -59,10 +59,20 @@ module.exports = function(grunt) {
                     config: 'config.yml'
                 }
             }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    keepalive: true,
+                    base: 'docs'
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
