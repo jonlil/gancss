@@ -1,0 +1,34 @@
+
+
+
+
+.codeExample {
+    border: 1px solid #c8d0d6;
+    border-radius: 3px;
+}
+
+.exampleOutput,
+.codeBlock {
+    position: relative;
+    padding: 2rem 1rem 1rem;
+}
+
+.exampleOutput { border-bottom: 1px solid #c8d0d6; }
+
+
+.exampleOutput:before,
+.codeBlock:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+    border-bottom: 1px solid #c8d0d6;
+    border-right: 1px solid #c8d0d6;
+    padding: 1px 5px;
+    border-radius: 0 0 3px 0;
+}
+
+.exampleOutput:before { content: 'Example'; }
+.codeBlock:before     { content: 'Code'; }
