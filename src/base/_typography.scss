@@ -122,9 +122,9 @@ code {
   font-size: $font-size-medium;
   padding: 0 1px;
   border: 1px solid $grey;
-  background: $lighter-grey;
   border-radius: $border-radius;
   font-family: $mono;
+  white-space: nowrap;
 }
 
 small, .small {

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 }
             },
             hologram: {
-                files: ['doc_assets/**/*.html'],
+                files: ['doc_assets/**/*.html', 'src/**/*.md'],
                 tasks: 'hologram'
             }
         },

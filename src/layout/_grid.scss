@@ -1,6 +1,21 @@
-//
-// GRID
-//
+/*doc
+---
+title: Grid
+name: grid
+category: Layout
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element. Buttons next to each other
+is spaced out with the adjacent selector `.btn + .btn`.
+
+```html_example
+<button class="btn primary">Primary</button>
+<a class="btn" href="#">Default</a>
+```
+
+*/
+
 
 .wrap {
   width: $page-width;
@@ -22,7 +37,7 @@
 }
 
 .row {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   @include clearfix;
   &.no-pad {
     margin-bottom: 0;
