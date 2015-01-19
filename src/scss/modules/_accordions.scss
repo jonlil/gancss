@@ -2,7 +2,7 @@
 // Accordions
 //
 
-$height: 2.2rem;
+$accordion-height: 2.2rem;
 
 ul[accordion] {
   overflow: hidden;
@@ -19,7 +19,7 @@ ul[accordion] {
       font-weight: $semi-bold;
       cursor: pointer;
       background: $grey;
-      height: $height !important;
+      height: $accordion-height !important;
       margin: 0;
       padding: 0.7rem 1.5rem;
       position: relative;
@@ -34,7 +34,7 @@ ul[accordion] {
       }
     }
     &.closed {
-      height: $height !important;
+      height: $accordion-height !important;
       h4 {
         background: $lighter-grey;
         &:after {

@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
         sass: {
             files: {
-                'build/gancss.css': 'src/gancss.scss'
+                'build/gancss.css': 'src/scss/gancss.scss'
             },
 
             prod: {
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 files: ['docs/**/*'],
             },
             css: {
-                files: 'src/**/*.scss',
+                files: 'src/scss/**/*.scss',
                 tasks: ['sass', 'autoprefixer', 'hologram'],
                 options: {
                     spawn: false

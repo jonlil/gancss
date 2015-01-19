@@ -37,11 +37,8 @@ is spaced out with the adjacent selector `.btn + .btn`.
 }
 
 .row {
-  margin-bottom: 1rem;
+  margin-bottom: $row;
   @include clearfix;
-  &.no-pad {
-    margin-bottom: 0;
-  }
 }
 
 .col-1 {
@@ -103,12 +100,43 @@ is spaced out with the adjacent selector `.btn + .btn`.
   float: none !important;
 }
 
-.row > [class*='col-']:first-child {
+[class*='col-']:first-child {
   margin-left: 0;
 }
 
-.row > [class*='col-']:last-child {
+[class*='col-']:last-child {
   float: right;
+}
+
+[class*='col-'].box {
+  background: $white;
+  padding: 2rem 2rem 1rem;
+  border-radius: $border-radius;
+
+  &.border-with-bg {
+    background: $lighter-grey;
+    box-shadow: inset 0 0 0 1px $grey;
+  }
+}
+
+.row.box {
+  background: $white;
+  padding: 2rem 3rem;
+  position: relative;
+
+  &.error {
+    background: $light-red;
+  }
+}
+
+[class*='col-'].center-box {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.module {
+  min-height: 310px;
 }
 
 // Enable multiple row columns without new .row

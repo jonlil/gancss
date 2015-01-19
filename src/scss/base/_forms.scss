@@ -11,7 +11,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
 
 ```html_example
 <label for="first_name">First name</label>
-<input type="text" id="first_name" />
+<input class="error" type="text" id="first_name" />
 <span class="error">This field is required</span>
 
 <label for="last_name">Last name</label>
@@ -94,26 +94,28 @@ textarea {
     border: 1px solid $grey;
     display: block;
     width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.6rem 0.8rem 0.5rem;
+    height: $height;
+    line-height: $height;
+    margin-bottom: 16px;
+    padding: 0 13px 0;
     border-radius: $border-radius;
-    font-size: 0.9rem;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.07);
-    line-height: 1.4;
+    font-size: $font-size-medium;
+    box-shadow: inset $box-shadow;
 
     // States
+    &:focus {
+        background: $white;
+        border: 1px solid $blue;
+        outline: 0;
+    }
+
+    // Modifiers
     &.error {
         border: 1px solid $red;
 
         &:focus {
             border: 1px solid $red;
         }
-    }
-
-    &:focus {
-        background: $white;
-        border: 1px solid $blue;
-        outline: 0;
     }
 
     &.small {
@@ -135,25 +137,6 @@ label {
     display: inline-block;
     font-size: $font-size-medium;
     line-height: 1.6;
-
-    // Radio and checkbox inside label
-    &.radio,
-    &.checkbox {
-        position: relative;
-        padding-left: 20px;
-        cursor: pointer;
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            position: absolute;
-            left: 1px;
-            margin-top: 4px;
-        }
-    }
-    &.radio + &.radio,
-    &.checkbox + &.checkbox {
-        margin-left: 20px;
-    }
 }
 
 
@@ -166,14 +149,24 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-// Checkboxes and radio buttons
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-    display: inline-block;
-    margin-left: 0.3rem;
-    margin-bottom: 0;
-    vertical-align: baseline;
+// Radio and checkbox inside label
+label.radio,
+label.checkbox {
+    position: relative;
+    padding-left: 20px;
     cursor: pointer;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        left: 1px;
+        margin-top: 4px;
+    }
+}
+
+label.radio + label.radio,
+label.checkbox + label.checkbox {
+    margin-left: 20px;
 }
 
 
@@ -184,18 +177,16 @@ input[type="radio"] + label {
 select, .choose-date {
     display: block;
     width: 100%;
+    height: $height;
+    line-height: $height;
     -webkit-appearance: none !important;
-    background: $lighter-grey url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
-    background-position: 100% center;
-    background-repeat: no-repeat;
+    background: $lighter-grey url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+) 100% center no-repeat;
     border: 1px solid $grey;
-    margin-bottom: 0.7rem;
-    padding: 0.6rem 3rem 0.5rem 0.8rem;
-    font-size: 0.9rem;
+    margin-bottom: $margin;
+    padding: 0 $padding 0 13px;
+    font-size: $font-size-medium;
     border-radius: $border-radius;
-    cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-    line-height: 1.45;
+    box-shadow: $box-shadow;
 
     // Hack to remove native arrow in FF
     -moz-appearance: none;

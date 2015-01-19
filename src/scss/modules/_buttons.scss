@@ -10,8 +10,9 @@ use either a `<button>` or an `<a>` element. Buttons next to each other
 is spaced out with the adjacent selector `.btn + .btn`.
 
 ```html_example
-<button class="btn primary">Primary</button>
 <a class="btn" href="#">Default</a>
+<button class="btn primary">Primary</button>
+<a class="btn cancel" href="#">Delete</a>
 ```
 
 ## Button sizes
@@ -46,6 +47,13 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 </div>
 ```
 
+## Buttons with icons
+
+```html_example
+<a class="btn" href="#"><span class="icon-rocket iconbtn"></span>Default</a>
+<a class="btn" href="#">Default<span class="icon-rocket iconbtn-right"></span></a>
+```
+
 */
 
 
@@ -55,7 +63,9 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 
 .btn, .btn:visited {
     display: inline-block;
-    padding: 0.6rem 1.6rem 0.5rem;
+    padding: 0 25px 0;
+    height: $height;
+    line-height: $height;
     font-size: $font-size-medium;
     font-weight: $semi-bold;
     background: $dark-grey;
@@ -63,18 +73,16 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     border-radius: $border-radius;
     border: none;
     cursor: pointer;
-    position: relative;
     text-align: center;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    line-height: 1.4;
     vertical-align: middle;
 
+    // States
     &:hover {
         background: $darker-grey;
         color: white;
     }
 
+    // Modifiers
     &.primary {
         background: $green;
 
@@ -92,8 +100,9 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     }
 
     &.small {
-        padding: 0.3rem 0.8rem 0.25rem;
-        vertical-align: middle;
+        height: $height-small;
+        line-height: $height-small;
+        padding: 0 13px 0;
     }
 
     &.active {

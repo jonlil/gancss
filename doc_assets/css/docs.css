@@ -1,25 +1,25 @@
+/*
+# Docs specific styles
+*/
 
 
 
 .styleguide-content > h1:not(:first-child) {
-    margin-top: 7rem;
+    margin-top: 4rem;
     border-top: 1px solid #e5e9ec;
-    padding-top: 5rem;
+    padding-top: 3rem;
     margin-left: -3rem;
     margin-right: -3rem;
     padding-left: 3rem;
 }
 .styleguide-content > h2 { margin-top: 5rem; }
 
-
-
-
-.codeExample {
+.styleguide-content .codeExample {
     border-radius: 3px;
     margin-bottom: 1rem;
 }
 
-.exampleOutput {
+.styleguide-content .exampleOutput {
     position: relative;
     padding: 3rem 3rem 2rem;
     border-top: 1px solid #c8d0d6;
@@ -28,7 +28,7 @@
     border-radius: 3px 3px 0 0;
 }
 
-.exampleOutput:before {
+.styleguide-content .exampleOutput:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,6 +41,6 @@
     border-radius: 0 0 3px 0;
 }
 
-.exampleOutput:before { content: 'Example'; }
+.styleguide-content .exampleOutput:before { content: 'Example'; }
 
-.codeBlock pre { border-radius: 0 0 3px 3px; }
+body:not(.overview) .styleguide-content .codeBlock pre { border-radius: 0 0 3px 3px; }
