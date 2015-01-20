@@ -77,6 +77,15 @@ is spaced out with the adjacent selector `.btn + .btn`.
 </div>
 ```
 
+## Append button
+
+```html_example
+<div class="append-btn">
+    <input type="text" />
+    <a class="btn primary" href="#">Primary</a>
+</div>
+```
+
 */
 
 
@@ -298,21 +307,16 @@ span.error {
         display: table-cell;
         position: relative;
         margin-bottom: 0;
-        height: 39px;
+
         &.small {
             height: 30px;
         }
     }
-    a {
-        display: table-cell;
+    .btn {
+        display: table-cell !important;
         border-radius: 0 $border-radius $border-radius 0;
         width: 1%;
         position: relative;
-        height: 38px;
-        padding: 0.6rem 1rem 0.5rem;
-        &.small {
-            height: 29px;
-        }
     }
 }
 

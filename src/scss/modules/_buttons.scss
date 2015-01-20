@@ -77,7 +77,7 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     vertical-align: middle;
 
     // States
-    &:hover {
+    &:hover, &:focus {
         background: $darker-grey;
         color: white;
     }
