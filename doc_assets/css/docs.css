@@ -3,7 +3,6 @@
 */
 
 
-
 .styleguide-content > h1:not(:first-child) {
     margin-top: 4rem;
     border-top: 1px solid #e5e9ec;
@@ -13,6 +12,8 @@
     padding-left: 3rem;
 }
 .styleguide-content > h2 { margin-top: 5rem; }
+
+.styleguide-content p + h2 { margin-top: 0; }
 
 .styleguide-content .codeExample {
     border-radius: 3px;
