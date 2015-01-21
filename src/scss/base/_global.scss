@@ -17,7 +17,9 @@ html, body {
   opacity: 1;
   height: 100%;
   font-size: $font-size;
+  font-family: $sans;
   line-height: $line-height;
+  color: $black;
   min-width: $min-page-width;
 }
 

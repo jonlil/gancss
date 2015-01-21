@@ -149,6 +149,8 @@ label.checkbox {
         left: 1px;
         margin-top: 4px;
     }
+
+    input[type="checkbox"] { margin-top: 5px; }
 }
 
 label.radio + label.radio,
@@ -357,6 +359,36 @@ and scrambled it to make a type specimen book.
     </label>
     <label class="radio">
         <input type="radio" name="radio" value="3" /> Radio 3
+    </label>
+</div>
+
+<div class="row">
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="1" /> Checkbox 1
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="2" /> Checkbox 2
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="3" /> Checkbox 3
+    </label>
+</div>
+
+<div>
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+
+<div>
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+
+<div class="row">
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
     </label>
 </div>
 
