@@ -17,12 +17,12 @@
 
 .styleguide-content .codeExample {
     border-radius: 3px;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .styleguide-content .exampleOutput {
     position: relative;
-    padding: 3rem 3rem 2rem;
+    padding: 40px 40px 32px;
     border-top: 1px solid #c8d0d6;
     border-left: 1px solid #c8d0d6;
     border-right: 1px solid #c8d0d6;

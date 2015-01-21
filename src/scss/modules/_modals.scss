@@ -2,6 +2,36 @@
 // Modals
 //
 
+/*doc
+---
+title: Modals
+name: modals
+category: Modules
+---
+
+Lorem Ipsum is simply dummy text of the printing and typesetting
+industry. Lorem Ipsum has been the industry's standard dummy text
+ever since the 1500s, when an unknown printer took a galley of type
+and scrambled it to make a type specimen book.
+
+```html_example
+<button class="btn primary modal-trigger">Show Modal</button>
+
+<div class="modal">
+    <div class="modal-content">
+        <h2 class="modal-header">Modal</h2>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">Footer</div>
+    </div>
+</div>
+```
+
+*/
+
 .modal {
   position: fixed;
   top: 10%;

@@ -51,7 +51,7 @@
     position: relative;
 
     $d:top;
-    $margin:left;
+    $triangle-margin:left;
 
     @if $position == top {
             $d: bottom;
@@ -64,9 +64,9 @@
     }
 
     @if $position == top or $position == bottom {
-            $margin: left;
+            $triangle-margin: left;
     } @else {
-            $margin: top;
+            $triangle-margin: top;
     }
 
     &:after, &:before {
@@ -83,8 +83,8 @@
             border-color: rgba(119, 100, 213, 0);
             border-#{$d}-color: $bg;
             border-width: $size;
-            #{$margin}: $percent;
-            margin-#{$margin}: -$size;
+            #{$triangle-margin}: $percent;
+            margin-#{$triangle-margin}: -$size;
             z-index:3;
     }
 
@@ -92,8 +92,8 @@
             border-color: rgba(194, 225, 245, 0);
             border-#{$d}-color: $borderColor;
             border-width: $size + (round($borderWidth*1.41421356));
-            #{$margin}: $percent;
-            margin-#{$margin}: -($size + (round($borderWidth*1.41421356)));
+            #{$triangle-margin}: $percent;
+            margin-#{$triangle-margin}: -($size + (round($borderWidth*1.41421356)));
             z-index:2;
     }
 }

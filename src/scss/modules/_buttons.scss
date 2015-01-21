@@ -12,6 +12,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
 ```html_example
 <a class="btn" href="#">Default</a>
 <button class="btn primary">Primary</button>
+<button class="btn primary muted">Muted</button>
 <a class="btn cancel" href="#">Delete</a>
 ```
 
@@ -37,13 +38,13 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 ```html_example
 <div class="btn-group-connected">
     <input type="radio" value="option1" id="option1">
-    <label for="option1" class="btn small has-tooltip">Option 1</label>
+    <label for="option1" class="btn small muted">Option 1</label>
 
     <input type="radio" value="option2" id="option2">
-    <label for="option2" class="btn small has-tooltip">Option 2</label>
+    <label for="option2" class="btn small muted">Option 2</label>
 
     <input type="radio" value="option3" id="option3">
-    <label for="option3" class="btn small has-tooltip">Option 3</label>
+    <label for="option3" class="btn small muted">Option 3</label>
 </div>
 ```
 
@@ -88,6 +89,15 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 
         &:hover {
             background: darken($green, 10%);
+        }
+    }
+
+    &.muted {
+        background: $base-grey;
+        color: $black;
+
+        &:hover {
+            background: $grey;
         }
     }
 
@@ -192,7 +202,7 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     }
 
     input:focus + label {
-        background: grey;
+        background: $grey;
         color: $black;
     }
 

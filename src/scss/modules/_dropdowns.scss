@@ -104,7 +104,6 @@ is spaced out with the adjacent selector `.btn + .btn`.
         pointer-events: none;
 
         > a {
-            background: $darker-grey;
 
             &:after {
                 content: "\e6cf";
@@ -144,7 +143,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
         line-height: $height;
         border-bottom: 1px solid $grey;
 
-        &:hover { background: $light-grey; }
+        &:hover { background: $base-grey; }
 
         &:first-child { border-radius: $border-radius $border-radius 0 0; }
 
