@@ -13,4 +13,18 @@ $(document).ready(function() {
         $(".modal").addClass("modal-open");
         $("body").addClass("modal-overlay");
     });
+
+
+    // Toggle multiselect
+    var list = "[searchable-dropdown] ul";
+
+    $(list).hide();
+
+    $(".display-value").on("click", function() {
+        $(list).show();
+    });
+
+    $(list).on("click", function() {
+        $(list).hide();
+    });
 });

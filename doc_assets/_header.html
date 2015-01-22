@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
     <head>
-        <title>GAN styleguide: <%= title %></title>
+        <% if file_name.include?('index.html') %>
+            <title>GAN styleguide: Overview</title>
+        <% else %>
+            <title>GAN styleguide: <%= title %></title>
+        <% end %>
         <link rel="stylesheet" href="/build/gancss.css">
         <link rel="stylesheet" href="css/github.css">
         <link rel="stylesheet" href="css/docs.css">
