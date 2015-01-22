@@ -285,7 +285,7 @@ span.error {
 
 .legend {
     border-bottom: 1px solid $base-grey;
-    margin: 2rem -3rem;
+    margin: ($margin*2) (-$padding);
 
     h3 {
         margin: 0 2.5rem -0.6rem;
