@@ -169,16 +169,18 @@ label.checkbox + label.checkbox {
 
 .file-upload-input {
     position: absolute;
-    top: 0;
+    top: -40px;
     right: 0;
     margin: 0;
     opacity: 0;
+    pointer-events: none;
     font-size: 43px;
     direction: ltr;
     cursor: pointer;
-    height: 36px;
-    line-height: 30px;
-    width: 351px;
+    height: 40px;
+    line-height: 40px;
+    width: 200%;
+    cursor: pointer;
 }
 
 
@@ -415,16 +417,9 @@ and scrambled it to make a type specimen book.
 ## File upload
 
 ```html_example
-<div class="row">
-    <label class="radio">
-        <input type="radio" name="radio" value="1" /> Radio 1
-    </label>
-    <label class="radio">
-        <input type="radio" name="radio" value="2" /> Radio 2
-    </label>
-    <label class="radio">
-        <input type="radio" name="radio" value="3" /> Radio 3
-    </label>
+<div class="file-upload-wrap btn primary">
+    <input type="file" id="file" class="file-upload-input">
+    <span>File upload</span>
 </div>
 ```
 
