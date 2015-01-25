@@ -144,9 +144,8 @@ and Tools - is our pattern library divided into different sections.
 
 # Improvements
 
-The purpose of this guide is to provide a solid foundation for maintaining
-a consistent visual style and a high quality code base across all of our sites.
-This page – The Overview – is where we keep our rules and guidelines for
-writing clean and effective CSS. The other pages – Base, Layout, Modules
-and Tools - is our pattern library divided into different sections.
-
+<ul class="with-bullet">
+    <li><strong>Modularize all class names.</strong> For example, <code>.sidebar-nav</code>. This module could be placed anywhere so a better name is probably <code>.stacked-nav</code> since that's the main characteristics.</li>
+    <li><strong>Reduce number of nested element selectors.</strong> Instead of writing <code>.module > h2</code> give the h2 a class name.</li>
+    <li><strong>Start using scss-lint.</strong> A tool like this could probably help us enforce the rules and guidelines.</li>
+</ul>

@@ -10,36 +10,21 @@ use either a `<button>` or an `<a>` element. Buttons next to each other
 is spaced out with the adjacent selector `.btn + .btn`.
 
 ```html_example
-<table class="table">
+<table class="table no-head">
         <tr>
-                <th>Email</th>
-                <th>First name</th>
-                <th>Last name</th>
+                <td>Simon.wallstrom@gmail.com</td>
         </tr>
         <tr>
                 <td>Simon.wallstrom@gmail.com</td>
-                <td>Simon</td>
-                <td>Wallstrom</td>
         </tr>
         <tr>
                 <td>Simon.wallstrom@gmail.com</td>
-                <td>Simon</td>
-                <td>Wallstrom</td>
         </tr>
         <tr>
                 <td>Simon.wallstrom@gmail.com</td>
-                <td>Simon</td>
-                <td>Wallstrom</td>
         </tr>
         <tr>
                 <td>Simon.wallstrom@gmail.com</td>
-                <td>Simon</td>
-                <td>Wallstrom</td>
-        </tr>
-        <tr>
-                <td>Simon.wallstrom@gmail.com</td>
-                <td>Simon</td>
-                <td>Wallstrom</td>
         </tr>
 </table>
 ```
@@ -74,11 +59,11 @@ is spaced out with the adjacent selector `.btn + .btn`.
         }
 
         td:first-child {
-            border-radius: 0 0 0 $border-radius;
+            border-bottom-left-radius: $border-radius;
         }
 
         td:last-child {
-            border-radius: 0 0 $border-radius 0;
+            border-bottom-right-radius: $border-radius;
         }
     }
 
@@ -96,11 +81,11 @@ is spaced out with the adjacent selector `.btn + .btn`.
 
         &:first-child {
             border-left: 1px solid $grey;
-            border-radius: $border-radius 0 0 0;
+            border-top-left-radius: $border-radius;
         }
 
         &:last-child {
-            border-radius: 0 $border-radius 0 0;
+            border-top-right-radius: $border-radius;
         }
     }
 
@@ -135,11 +120,11 @@ is spaced out with the adjacent selector `.btn + .btn`.
         }
 
         td:first-child {
-            border-radius: $border-radius 0 0 0;
+            border-top-left-radius: $border-radius;
         }
 
         td:last-child {
-            border-radius: 0 $border-radius 0 0;
+            border-top-right-radius: $border-radius;
         }
     }
 }

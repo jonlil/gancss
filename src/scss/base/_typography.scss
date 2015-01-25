@@ -119,7 +119,7 @@ pre {
 code {
     font-size: $font-size-medium;
     padding: 0 3px;
-    border: 1px solid $grey;
+    background: $light-grey;
     border-radius: $border-radius;
     font-family: $mono;
     white-space: nowrap;
@@ -144,7 +144,7 @@ small, .small {
 }
 
 .light-text {
-    color: $dark-grey;
+    color: #A4AAAE;
 }
 
 .lowercase {

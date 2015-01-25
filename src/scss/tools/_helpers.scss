@@ -30,6 +30,10 @@ is spaced out with the adjacent selector `.btn + .btn`.
 }
 
 // Positioning
+.no-float {
+  float: none !important;
+}
+
 .left {
   float: left !important;
 }
