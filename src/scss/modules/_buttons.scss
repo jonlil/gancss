@@ -38,13 +38,13 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 ```html_example
 <div class="btn-group-connected">
     <input name="btn-group" type="radio" value="option1" id="option1">
-    <label for="option1" class="btn small primary">Option 1</label>
+    <label for="option1" class="btn small">Option 1</label>
 
     <input name="btn-group" type="radio" value="option2" id="option2">
-    <label for="option2" class="btn small primary">Option 2</label>
+    <label for="option2" class="btn small">Option 2</label>
 
     <input name="btn-group" type="radio" value="option3" id="option3">
-    <label for="option3" class="btn small primary">Option 3</label>
+    <label for="option3" class="btn small">Option 3</label>
 </div>
 ```
 
@@ -177,9 +177,11 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     font-size: 0;
 
     label {
-        margin-left: 0 !important;
-        margin-right: 1px;
+        margin-left: -1px !important;
         border-radius: 0;
+        border: 1px solid $grey;
+        background: none;
+        color: $black;
 
         &:first-of-type {
             border-radius: $border-radius 0 0 $border-radius;
@@ -209,12 +211,20 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     }
 
     input:checked + label {
-        background: $dark-grey;
+        position: relative;
+        background: $green;
         color: white;
+        border: 1px solid $green;
     }
 
     input:checked + label:hover {
-        background: $dark-grey;
+        background: $green;
+        color: $white;
+    }
+
+    input + label:hover {
+        background: $light-grey;
+        color: $black;
     }
 
     .tooltip {
