@@ -1,6 +1,7 @@
                     </article> <!-- END styleguide-content -->
 
                     <% if file_name.include?('index.html') %>
+
                         <aside class="col-4 sidebar">
                             <ul class="sidebar-nav">
                                     <li><a href="#introduction">Introduction</a></li>
@@ -14,14 +15,23 @@
                                     <li><a href="#file-layout">Improvements</a></li>
                             </ul>
                         </aside>
+
                     <% else %>
+
                         <aside class="col-4 sidebar">
-                            <ul class="sidebar-nav">
-                                <% @blocks.each do |b| %>
-                                    <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
-                                <% end %>
-                            </ul>
+
+                            <% if !blocks.empty? %>
+                                <ul class="sidebar-nav">
+                                    <% for section in blocks %>
+                                        <% if section[:parent].nil? %>
+                                            <li><a class="pas" href="#<%= section[:name] %>"><%= section[:title] %></a></li>
+                                        <% end %>
+                                    <% end %>
+                                </ul>
+                            <% end %>
+
                         </aside>
+
                     <% end %>
 
                 </section> <!-- END has-sidebar -->
