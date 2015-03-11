@@ -1,0 +1,62 @@
+/*doc
+---
+parent: forms
+title: Text fields
+---
+
+```html_example
+<label for="input_text">Text input</label>
+<input type="text" id="input_text" />
+<label for="text_area">Text Area</label>
+<textarea id="text_area"></textarea>
+```
+
+*/
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="number"],
+textarea {
+    background: $lighter-grey;
+    border: 1px solid $grey;
+    display: block;
+    width: 100%;
+    height: $height;
+    line-height: $height;
+    margin-bottom: 16px;
+    padding: 0 13px;
+    border-radius: $border-radius;
+    font-size: $font-size-medium;
+    box-shadow: inset $box-shadow;
+
+    // States
+    &:hover {
+        border: 1px solid $dark-grey;
+    }
+
+    &:focus {
+        background: $white;
+        border: 1px solid $blue;
+        outline: 0;
+    }
+
+    // Modifiers
+    &.error {
+        border: 1px solid $red;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+    }
+
+    &.small {
+        height: $height-small;
+    }
+}
+
+textarea {
+    min-height: 150px;
+}

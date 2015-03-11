@@ -19,8 +19,15 @@
 @import "base/normalize";
 @import "base/global";
 @import "base/typography";
-@import "base/forms";
 @import "base/tables";
+
+@import "base/forms/check-radio";
+@import "base/forms/fileuploads";
+@import "base/forms/labels";
+@import "base/forms/layout";
+@import "base/forms/selects";
+@import "base/forms/textfields";
+@import "base/forms/validations";
 
 
 // -------------------------------------------------------------
@@ -50,6 +57,7 @@
 @import "modules/nav";
 @import "modules/notifications";
 @import "modules/pagination";
+@import "modules/postfix";
 @import "modules/progressbar";
 @import "modules/slider";
 @import "modules/tabs";

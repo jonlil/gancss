@@ -1,12 +1,24 @@
-//
-// TYPOGRAPHY
-//
+/*doc
+---
+title: Typography
+name: typography
+category: Base
+---
 
+These are the heading sizes that you can use site wide.
 
-// # Block elements
-// # Inline elements
-// # Classes
-// # Documentation
+```html_example_table
+<h1>Heading 1 32px</h1>
+<h2>Heading 2 26px</h2>
+<h3>Heading 3 22px</h3>
+<h4>Heading 4 18px</h4>
+<h5>Heading 5 16px</h5>
+<p>This is an example of our base font style 16px. Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+```
+
+*/
 
 
 // -------------------------------------------------------------
@@ -154,28 +166,3 @@ small, .small {
 a.delete, a.delete:visited {
     color: $red;
 }
-
-
-// -------------------------------------------------------------
-// # Documentation
-// -------------------------------------------------------------
-
-/*doc
----
-title: Typography
-name: typography
-category: Base
----
-
-These are the heading sizes that you can use site wide.
-
-```html_example_table
-<h1>Heading 1 32px</h1>
-<h2>Heading 2 26px</h2>
-<h3>Heading 3 22px</h3>
-<h4>Heading 4 18px</h4>
-<h5>Heading 5 16px</h5>
-<p>This is an example of our base font style 16px. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-```
-
-*/

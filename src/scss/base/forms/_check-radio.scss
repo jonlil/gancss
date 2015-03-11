@@ -1,0 +1,73 @@
+/*doc
+
+---
+parent: forms
+title: Checkboxes and radio buttons
+---
+
+```html_example
+<div class="row">
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+    <label class="radio">
+        <input type="radio" name="radio" value="2" /> Radio 2
+    </label>
+    <label class="radio">
+        <input type="radio" name="radio" value="3" /> Radio 3
+    </label>
+</div>
+
+<div>
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+
+<div>
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+
+<div class="row">
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+```
+
+*/
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+
+    // States
+    &:hover {
+        background: $dark-grey;
+    }
+}
+
+// Radio and checkbox inside label
+label.radio,
+label.checkbox {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        left: 1px;
+        margin-top: 4px;
+    }
+
+    input[type="checkbox"] { margin-top: 5px; }
+}
+
+label.radio + label.radio,
+label.checkbox + label.checkbox {
+    margin-left: 20px;
+}

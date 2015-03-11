@@ -1,0 +1,20 @@
+/*doc
+
+---
+parent: forms
+title: Labels
+---
+
+```html_example
+<label for="label">Label</label>
+<input type="text" id="label" />
+```
+
+*/
+
+
+label {
+    display: inline-block;
+    font-size: $font-size-medium;
+    line-height: 1.6;
+}

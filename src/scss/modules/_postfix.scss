@@ -1,0 +1,46 @@
+/*doc
+
+---
+title: Post/Prefix
+name: post/prefix
+category: Modules
+---
+
+```html_example
+<div class="append-btn">
+    <input type="text" />
+    <a class="btn primary" href="#">Primary</a>
+</div>
+```
+
+*/
+
+
+.append-btn {
+    display: table;
+    margin-bottom: 0.5rem;
+    position: relative;
+    width: 100%;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="url"],
+    textarea {
+        margin-bottom: 0;
+        border-radius: $border-radius 0 0 $border-radius;
+        display: table-cell;
+        position: relative;
+        margin-bottom: 0;
+
+        &.small {
+            height: 30px;
+        }
+    }
+    .btn {
+        display: table-cell !important;
+        border-radius: 0 $border-radius $border-radius 0;
+        width: 1%;
+        position: relative;
+    }
+}
