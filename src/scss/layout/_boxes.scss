@@ -43,7 +43,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
 
 
 // Local vars
-$boxes-margin: -(($margin) + 1px);
+$boxes-margin: -(($margin*2) + 1px);
 
 
 // -------------------------------------------------------------
@@ -52,7 +52,7 @@ $boxes-margin: -(($margin) + 1px);
 
 [class*='col-'].box {
     background: $white;
-    padding: $margin $margin 0;
+    padding: $margin*2 $margin*2 $margin;
     border-radius: $border-radius;
 
     &.border-with-bg {
@@ -69,10 +69,10 @@ $boxes-margin: -(($margin) + 1px);
 .box-header {
     background: $blue;
     color: $white;
-    margin: $boxes-margin $boxes-margin $margin;
-    padding: 0 $margin;
-    height: $height;
-    line-height: $height;
+    margin: $boxes-margin $boxes-margin $margin*2;
+    padding: 0 $margin*2;
+    height: 40px;
+    line-height: 40px;
     font-size: $font-size;
     font-weight: $semi-bold;
     border-radius: $border-radius $border-radius 0 0;

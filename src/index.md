@@ -11,8 +11,6 @@ and Tools - is our pattern library divided into different sections.
       WHAT WE'LL COVER:
 
     - Quick Facts
-    - Preprocessing
-    - Prefixing
     - Folder Architecture
     - File Layout
     - Usage
