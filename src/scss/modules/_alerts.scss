@@ -9,10 +9,9 @@ name: alerts
 category: Modules
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting
-industry. Lorem Ipsum has been the industry's standard dummy text
-ever since the 1500s, when an unknown printer took a galley of type
-and scrambled it to make a type specimen book.
+Alerts can be used to display important messages with great contrast
+to draw the attention of the user. It comes in a few different colors.
+See examples below for available options.
 
 ```html_example
 <p class="alert success">This is an alert with a success message</p>
@@ -25,7 +24,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
 .alert {
     color: $white;
-    padding: 9px 15px;
+    padding: 7px 13px 6px;
     font-size: $font-size-medium;
     margin-bottom: $margin;
     border-radius: $border-radius;

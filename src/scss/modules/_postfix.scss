@@ -7,9 +7,15 @@ category: Modules
 ---
 
 ```html_example
+<div class="row">
 <div class="append-btn">
     <input type="text" />
     <a class="btn primary" href="#">Primary</a>
+</div>
+</div>
+<div class="append-btn">
+    <input class="small" type="text" />
+    <a class="btn primary small" href="#">Primary</a>
 </div>
 ```
 
@@ -18,7 +24,6 @@ category: Modules
 
 .append-btn {
     display: table;
-    margin-bottom: 0.5rem;
     position: relative;
     width: 100%;
 
@@ -29,7 +34,6 @@ category: Modules
     textarea {
         margin-bottom: 0;
         border-radius: $border-radius 0 0 $border-radius;
-        display: table-cell;
         position: relative;
         margin-bottom: 0;
 

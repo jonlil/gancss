@@ -27,7 +27,7 @@ textarea {
     height: $height;
     line-height: $height;
     margin-bottom: 16px;
-    padding: 0 13px;
+    padding: 0 9px;
     border-radius: $border-radius;
     font-size: $font-size-medium;
     box-shadow: inset $box-shadow;
@@ -54,9 +54,63 @@ textarea {
 
     &.small {
         height: $height-small;
+        line-height: $height-small;
     }
 }
 
 textarea {
     min-height: 150px;
+}
+
+
+// -------------------------------------------------------------
+// # Icons inside textfields
+// -------------------------------------------------------------
+.input-wrap {
+    position: relative;
+
+    input[type="email"].ng-valid,
+    input[type="text"].ng-valid,
+    input[type="password"].ng-valid,
+    input[type="url"].ng-valid {
+        position: relative;
+    }
+
+    .valid, .invalid, .append-icon {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        color: $green;
+        &.invalid {
+            color: $red;
+        }
+    }
+    .has-icon {
+        padding-left: 35px;
+    }
+
+    .prepend-icon,
+    .append-icon {
+        position: absolute;
+        top: 12px;
+        line-height: 1;
+    }
+
+    .prepend-icon { left: 12px; }
+    .append-icon { right: 12px; }
+}
+
+.input-wrap-small .prepend-icon {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+.input-wrap-small .append-icon {
+    top: 9px;
+    right: 9px;
+}
+
+.input-wrap-small input[type="text"] {
+    padding-left: 28px;
 }

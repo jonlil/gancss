@@ -53,94 +53,67 @@ The folder structure is inspired by SMACCS approach to CSS. We do our best to ke
 
 # File Layout
 
-We love organization and consistency, so we structure each file according to a set of rules.
+We try to stay organized and write consistent CSS, so we structure each file according to a set of rules.
 This is a simple example showing how every file should look:
 
-    //
-    // TYPOGRAPHY
-    //
+    /*doc
+    ---
+    title: Alerts
+    name: alerts
+    category: Modules
+    ---
+
+    Alerts can be used to display important messages with great contrast
+    to draw the attention of the user. It comes in a few different colors.
+    See examples below for available options.
+
+    ```html_example
+    <p class="alert success">This is an alert with a success message</p>
+    <p class="alert error">This is an alert with an error message</p>
+    <p class="alert edit">This is an longform alert with muted message.
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    ```
+
+    */
 
 
-    // # Block elements
-    // # Inline elements
-    // # Classes
-    // # Documentation
+    .alert {
+        color: $white;
+        padding: 7px 13px 6px;
+        font-size: $font-size-medium;
+        margin-bottom: $margin;
+        border-radius: $border-radius;
+        display: block;
 
+        &.success { background: $green; }
 
-    // -------------------------------------------------------------
-    // # Block elements
-    // -------------------------------------------------------------
+        &.error { background: $red; }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: $semi-bold;
-        margin: 0 0 $font-size/2 0;
-        line-height: 1.2;
-    }
+        &.edit {
+            background: $base-grey;
+            color: $black;
+        }
 
-    h1 {
-        font-size: 32px;
-    }
+        // Remove link color in alert
+        a {
+            color: white;
 
-    h2 {
-        font-size: 26px;
-    }
-
-    h3 {
-        font-size: 22px;
-    }
-
-    h4 {
-        font-size: 18px;
-    }
-
-    h5 {
-        font-size: $font-size;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-weight: $regular;
-        margin: 0 0 $font-size 0;
-    }
-
-
-    // -------------------------------------------------------------
-    // # Inline elements
-    // -------------------------------------------------------------
-
-    a, a:visited {
-        text-decoration: none;
-        color: $blue;
-        cursor: pointer;
-
-        &:hover {
-            color: darken($blue, 20%);
+            &.underline {
+                border-bottom: 1px dotted rgba(white, 0.5);
+            }
         }
     }
 
-    b, strong { font-weight: $semi-bold; }
-
+Every file starts with a comment section. This is the part that automatically
+generates our style guide. Try to keep every file small and readable.
 
 # Usage
 
-The purpose of this guide is to provide a solid foundation for maintaining
-a consistent visual style and a high quality code base across all of our sites.
-This page – The Overview – is where we keep our rules and guidelines for
-writing clean and effective CSS. The other pages – Base, Layout, Modules
-and Tools - is our pattern library divided into different sections.
+Coming soon...
 
 # Documentation
 
-The purpose of this guide is to provide a solid foundation for maintaining
-a consistent visual style and a high quality code base across all of our sites.
-This page – The Overview – is where we keep our rules and guidelines for
-writing clean and effective CSS. The other pages – Base, Layout, Modules
-and Tools - is our pattern library divided into different sections.
+Coming soon...
 
 # Improvements
 

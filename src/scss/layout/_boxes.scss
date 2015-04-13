@@ -1,16 +1,49 @@
-//
-// FORMS
-//
+/*doc
+---
+title: Boxes
+name: boxes
+category: Layout
+---
 
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element. Buttons next to each other
+is spaced out with the adjacent selector `.btn + .btn`.
 
-// # Boxes
-// # Box headers
-// # Row boxes
-// # Documentation
+```html_example
+<div class="row">
+    <div class="col-12 box border-with-bg">
+        <h4 class="box-header">Box header</h4>
+        <p>Box with border and bg</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 box border-with-bg">
+        <h4 class="box-header light">Box header</h4>
+        <p>Box with border and bg</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 box border-with-bg">
+        <h4 class="box-header muted">Box header</h4>
+        <p>Box with border and bg</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 box border-with-bg">
+        <h4 class="box-header error">Box header</h4>
+        <p>Box with border and bg</p>
+    </div>
+</div>
+```
+
+*/
 
 
 // Local vars
-$boxes-margin: -(($margin*2) + 1px);
+$boxes-margin: -(($margin) + 1px);
 
 
 // -------------------------------------------------------------
@@ -19,7 +52,7 @@ $boxes-margin: -(($margin*2) + 1px);
 
 [class*='col-'].box {
     background: $white;
-    padding: $margin*2 $margin*2 $margin;
+    padding: $margin $margin 0;
     border-radius: $border-radius;
 
     &.border-with-bg {
@@ -36,8 +69,8 @@ $boxes-margin: -(($margin*2) + 1px);
 .box-header {
     background: $blue;
     color: $white;
-    margin: $boxes-margin $boxes-margin $margin*1.5;
-    padding: 0 $margin*2;
+    margin: $boxes-margin $boxes-margin $margin;
+    padding: 0 $margin;
     height: $height;
     line-height: $height;
     font-size: $font-size;
@@ -91,74 +124,3 @@ $boxes-margin: -(($margin*2) + 1px);
 .module {
     min-height: 310px;
 }
-
-
-// -------------------------------------------------------------
-// # Documentation
-// -------------------------------------------------------------
-
-/*doc
----
-title: Boxes
-name: boxes
-category: Layout
----
-
-Button styles can be applied to any element. Typically you'll want to
-use either a `<button>` or an `<a>` element. Buttons next to each other
-is spaced out with the adjacent selector `.btn + .btn`.
-
-```html_example
-<div class="row btn-group-connected text-center">
-    <input type="radio" id="monthly" name="subscription_period" value="1">
-    <label for="monthly" class="btn small muted">Pay monthly</label>
-    <input type="radio" id="yearly" name="subscription_period" value="12">
-    <label for="yearly" class="btn small muted">Pay yearly</label>
-</div>
-
-<div class="row">
-    <div class="col-4 box border-with-bg text-center">
-        <h4 class="box-header">Bronze</h4>
-        <p class="small no-mar">Mails/month</p>
-        <h1 class="no-mar">10 000</h1>
-        <p class="small">99 SEK/month</p>
-        <p class="no-mar">
-            <a href="#" class="btn primary small">Choose</a>
-        </p>
-    </div>
-    <div class="col-4 box border-with-bg text-center">
-        <h4 class="box-header">Silver</h4>
-        <p class="small no-mar">Mails/month</p>
-        <h1 class="no-mar">25 000</h1>
-        <p class="small">239 SEK/month</p>
-        <p class="no-mar">
-            <a href="#" class="btn primary small">Choose</a>
-        </p>
-    </div>
-    <div class="col-4 box border-with-bg text-center">
-        <h4 class="box-header">Gold</h4>
-        <p class="small no-mar">Mails/month</p>
-        <h1 class="no-mar">50 000</h1>
-        <p class="small">449 SEK/month</p>
-        <p class="no-mar">
-            <a href="#" class="btn primary small">Choose</a>
-        </p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12 box border-with-bg">
-        <h4 class="box-header light">Box header</h4>
-        <p>Box with border and bg</p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12 box border-with-bg">
-        <h4 class="box-header error">Box header</h4>
-        <p>Box with border and bg</p>
-    </div>
-</div>
-```
-
-*/

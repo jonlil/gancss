@@ -21,10 +21,7 @@ $(document).ready(function() {
     $(list).hide();
 
     $(".display-value").on("click", function() {
-        $(list).show();
-    });
-
-    $(list).on("click", function() {
-        $(list).hide();
+        $(".display-value .btn").toggleClass("active");
+        $(list).toggle();
     });
 });

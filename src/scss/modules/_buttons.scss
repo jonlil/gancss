@@ -38,13 +38,13 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 ```html_example
 <div class="btn-group-connected">
     <input name="btn-group" type="radio" value="option1" id="option1">
-    <label for="option1" class="btn small">Option 1</label>
+    <label for="option1" class="btn muted">Option 1</label>
 
     <input name="btn-group" type="radio" value="option2" id="option2">
-    <label for="option2" class="btn small">Option 2</label>
+    <label for="option2" class="btn muted">Option 2</label>
 
     <input name="btn-group" type="radio" value="option3" id="option3">
-    <label for="option3" class="btn small">Option 3</label>
+    <label for="option3" class="btn muted">Option 3</label>
 </div>
 ```
 
@@ -81,10 +81,17 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
     vertical-align: middle;
 
     // States
-    &:hover, &:focus {
+    &:hover {
         background: $darker-grey;
         color: white;
     }
+
+    &:active,
+    &.active {
+        box-shadow: $box-shadow-inset;
+    }
+
+    &.active { background: red; }
 
     // Modifiers
     &.primary {
@@ -116,25 +123,6 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
         height: $height-small;
         line-height: $height-small;
         padding: 0 13px 0;
-    }
-
-    &.active {
-        background: $dark-grey;
-
-        &:after {
-            top: 100%;
-            left: 50%;
-            border: solid transparent;
-            content: "";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(84, 149, 192, 0);
-            border-top-color: $dark-grey;
-            border-width: 6px;
-            margin-left: -6px;
-        }
     }
 
     &.current {
@@ -176,7 +164,7 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 .btn-group-connected {
     font-size: 0;
 
-    label {
+    .btn {
         margin-left: -1px !important;
         border-radius: 0;
         border: 1px solid $grey;
@@ -201,10 +189,6 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
         opacity: 0;
     }
 
-    input:focus {
-        outline: none;
-    }
-
     input:focus + label {
         background: $grey;
         color: $black;
@@ -212,17 +196,31 @@ Button groups is used to add some extra spacing between buttons on the same `.ro
 
     input:checked + label {
         position: relative;
+    }
+
+    // Modifiers
+    input:checked + .btn,
+    input:checked + .btn:hover {
+        background: $dark-grey;
+        color: white;
+        border: 1px solid $dark-grey;
+    }
+
+    input:checked + .btn.primary,
+    input:checked + .btn.primary:hover {
         background: $green;
         color: white;
         border: 1px solid $green;
     }
 
-    input:checked + label:hover {
-        background: $green;
-        color: $white;
+    input:checked + .btn.muted,
+    input:checked + .btn.muted:hover {
+        background: $base-grey;
+        color: $black;
+        border: 1px solid $grey;
     }
 
-    input + label:hover {
+    input + .btn:hover {
         background: $light-grey;
         color: $black;
     }

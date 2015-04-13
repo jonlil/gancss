@@ -15,37 +15,3 @@ span.error {
         margin-top: -0.1rem;
     }
 }
-
-// Position icons inside input
-.input-wrap {
-    position: relative;
-    input[type="email"].ng-valid,
-    input[type="text"].ng-valid,
-    input[type="password"].ng-valid,
-    input[type="url"].ng-valid {
-        // border: 1px solid $green
-        position: relative;
-    }
-    span.valid, span.invalid, span.append-icon {
-        position: absolute;
-        top: 0.75rem;
-        right: 0.9rem;
-        color: $green;
-        &.invalid {
-            color: $red;
-        }
-    }
-    .has-icon {
-        padding: 0.6rem 0.5rem 0.5rem 2.4rem;
-    }
-    span.prepend-icon {
-        position: absolute;
-        top: 0.75rem;
-        left: 0.9rem;
-    }
-    span.append-icon {
-        position: absolute;
-        top: 0.75rem;
-        right: 0.9rem;
-    }
-}

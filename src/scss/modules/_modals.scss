@@ -19,18 +19,21 @@ and scrambled it to make a type specimen book.
 
 <div class="modal">
         <div class="modal-content">
-                <h2 class="modal-header">Modal</h2>
-                <div class="row">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="modal-footer">Footer</div>
+            <h2 class="modal-header">Modal<a href="#" class="icon-cross"></a></h2>
+            <div class="row text-center">
+                <p>Du kommer att ta bort följande utskick:</p>
+                <p class="ingress">'Header and left column'</p>
+            </div>
+            <div class="btn-group modal-footer">
+                <a class="btn small">Cancel</a>
+                <a class="btn cancel small right">Delete</a>
+            </div>
         </div>
 </div>
 ```
 
 */
+
 
 .modal {
     position: fixed;
@@ -97,7 +100,7 @@ body:after {
     position: relative;
     border-radius: 5px;
     margin: 0 auto;
-    padding: 1rem 2.5rem;
+    padding: $margin $margin 0;
     opacity: 0;
 }
 
@@ -106,15 +109,16 @@ body:after {
 }
 
 .modal-header {
+    position: relative;
     background: $dark-grey;
     color: white;
-    margin: -1rem -2.5rem 2rem;
-    padding: 0.7rem 2rem 0.6rem;
-    font-size: 1rem;
-    font-weight: $bold;
-    text-transform: uppercase;
+    margin: (-$margin) (-$margin) $margin;
+    padding: 0 $margin;
+    height: $height;
+    line-height: $height;
     text-align: center;
-    position: relative;
+    font-size: $font-size;
+    font-weight: $semi-bold;
     border-radius: $border-radius $border-radius 0 0;
 
     a {
@@ -122,10 +126,10 @@ body:after {
         top: 0;
         bottom: 0;
         right: 0;
-        padding: 0.9rem;
+        line-height: 38px;
+        padding: 0 12px;
         color: $white;
         border-radius: 0 2px 0 0;
-        transition: 0.2s background;
 
         &:hover {
             background: $darker-grey;
@@ -137,7 +141,7 @@ body:after {
 .modal-footer {
     background: $light-grey;
     border-top: 1px solid $grey;
-    margin: 0rem -2.5rem -1rem;
-    padding: 1rem;
+    margin: $margin (-$margin) (-$margin);
+    padding: $margin;
     border-radius: 0 0 $border-radius $border-radius;
 }

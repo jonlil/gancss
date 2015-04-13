@@ -45,3 +45,7 @@
 .styleguide-content .exampleOutput:before { content: 'Example'; }
 
 body:not(.overview) .styleguide-content .codeBlock pre { border-radius: 0 0 3px 3px; }
+
+#flash-messages {
+    position: relative;
+}
