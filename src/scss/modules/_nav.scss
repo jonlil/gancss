@@ -37,13 +37,17 @@ use either a `<button>` or an `<a>` element.
     }
     li.active {
         a {
-            margin: 0 -3.01rem;
-            background: #3d7ba4;
-            padding-left: 3rem;
-            color: #fff;
-            margin-top: -1px;
-            border-top: 1px solid #3d7ba4;
-            border-bottom: 1px solid #3d7ba4;
+            color: $black;
+            cursor: default;
+
+            &:before {
+                content: "\e6d1";
+                font-family: $icon;
+                vertical-align: middle;
+                line-height: 1;
+                margin-right: 5px;
+                color: $black;
+            }
         }
     }
 }
