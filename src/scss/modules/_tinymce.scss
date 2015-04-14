@@ -44,14 +44,14 @@
     // Remove active state
     button:active, button:focus {
       box-shadow: none;
-      background: $grey;
+      background: $base-grey;
       border-color: $grey;
     }
     .mce-btn-group .mce-btn.mce-active,
     .mce-btn-group .mce-btn.mce-active:hover,
     .mce-btn-group .mce-btn:active {
       box-shadow: none;
-      background: $grey;
+      background: $base-grey;
       border-color: $grey;
     }
   }
@@ -62,14 +62,13 @@
   .mce-btn-group .mce-btn.mce-active,
   .mce-btn-group .mce-btn.mce-active:hover,
   .mce-btn-group .mce-btn:active {
-    background: $grey;
-    //border: none
+    background: $base-grey;
     text-shadow: none;
     box-shadow: none;
   }
   .mce-btn-group .mce-btn:hover,
   .mce-btn-group .mce-btn:focus {
-    background: $grey;
+    background: $base-grey;
     border-color: $grey;
     border-width: 1px 1px 1px 0;
   }
@@ -167,7 +166,7 @@ body {
         padding: 14px 20px 13px;
         transition: 0.3s all;
         &:hover {
-          background: $grey;
+          background: $base-grey;
           border-radius: 0 $border-radius 0 0;
         }
       }
