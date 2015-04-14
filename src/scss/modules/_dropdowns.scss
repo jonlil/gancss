@@ -123,14 +123,14 @@ is spaced out with the adjacent selector `.btn + .btn`.
 .btn-dropdown {
     display: none;
     top: 120%;
-    left: 0;
+    right: 0;
     background: $white;
     border: 1px solid $grey;
     border-radius: $border-radius;
     z-index: $z-small;
     text-align: left;
     box-shadow: $box-shadow-large;
-    @include cssTriangle(6px, 1px, $grey, top, 15%, $white);
+    @include cssTriangle(6px, 1px, $grey, top, 85%, $white);
     position: absolute;
     padding: 8px 0;
 
