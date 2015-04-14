@@ -37,23 +37,23 @@ h6 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 22px;
-}
-
-h4 {
     font-size: 18px;
 }
 
-h5 {
+h4 {
     font-size: $font-size;
+}
+
+h5 {
+    font-size: $font-size-medium;
     text-transform: uppercase;
 }
 

@@ -30,7 +30,7 @@ separate sections from each other.
 
 .legend {
     border-bottom: 1px solid $base-grey;
-    margin: ($margin*2) (-$padding);
+    margin: ($margin) (-$padding) ($margin*2);
 
     h3 {
         margin: 0 2.5rem -0.6rem;
