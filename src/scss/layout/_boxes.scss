@@ -69,7 +69,7 @@ $boxes-margin: -(($margin*2) + 1px);
 .box-header {
     background: $blue;
     color: $white;
-    margin: $boxes-margin $boxes-margin $margin*2;
+    margin: $boxes-margin $boxes-margin $margin*1.5;
     padding: 0 $margin*2;
     height: 40px;
     line-height: 40px;

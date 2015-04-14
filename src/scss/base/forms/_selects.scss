@@ -52,7 +52,8 @@ select, .choose-date {
         border: 1px solid $light-blue;
     }
     &.small {
-        padding: 0.3rem 3rem 0.3rem 0.8rem;
+        height: $height-small;
+        line-height: $height-small;
     }
 }
 

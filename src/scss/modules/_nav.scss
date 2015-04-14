@@ -23,7 +23,7 @@ use either a `<button>` or an `<a>` element.
 // Sidebar navigation
 .sidebar-nav {
 
-    margin: 0;
+    margin: 0 0 $margin*2;
 
     a {
         display: block;

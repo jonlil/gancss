@@ -98,6 +98,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
         padding: 8px 10px;
         font-weight: $semi-bold;
         background: $base-grey;
+        line-height: 1.1;
 
         &:first-child {
             border-left: 1px solid $grey;
@@ -114,6 +115,7 @@ is spaced out with the adjacent selector `.btn + .btn`.
         border-bottom: 1px solid $grey;
         padding: 6px 10px;
         vertical-align: top;
+        line-height: 1.1;
 
         ul, p {
             margin: 0;
