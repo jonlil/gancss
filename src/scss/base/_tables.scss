@@ -117,7 +117,9 @@ is spaced out with the adjacent selector `.btn + .btn`.
         vertical-align: top;
         line-height: 1.1;
 
-        ul, p {
+        ul,
+        p,
+        label {
             margin: 0;
             line-height: 1.1;
         }
