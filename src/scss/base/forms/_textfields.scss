@@ -79,8 +79,8 @@ textarea {
 
     .valid, .invalid, .append-icon {
         position: absolute;
-        top: 12px;
-        right: 12px;
+        top: 11px;
+        right: 11px;
         color: $green;
         &.invalid {
             color: $red;
@@ -93,23 +93,23 @@ textarea {
     .prepend-icon,
     .append-icon {
         position: absolute;
-        top: 12px;
+        top: 11px;
         line-height: 1;
     }
 
-    .prepend-icon { left: 12px; }
-    .append-icon { right: 12px; }
+    .prepend-icon { left: 11px; }
+    .append-icon { right: 11px; }
 }
 
 .input-wrap-small .prepend-icon {
     position: absolute;
-    top: 9px;
-    left: 9px;
+    top: 7px;
+    left: 7px;
 }
 
 .input-wrap-small .append-icon {
-    top: 9px;
-    right: 9px;
+    top: 7px;
+    right: 7px;
 }
 
 .input-wrap-small input[type="text"] {
