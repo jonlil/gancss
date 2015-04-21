@@ -26,6 +26,7 @@ category: Modules
     display: table;
     position: relative;
     width: 100%;
+    margin-bottom: $margin;
 
     input[type="text"],
     input[type="email"],
@@ -44,7 +45,19 @@ category: Modules
     .btn {
         display: table-cell !important;
         border-radius: 0 $border-radius $border-radius 0;
+        white-space: nowrap;
         width: 1%;
         position: relative;
+    }
+
+    // add border to muted button
+    .muted {
+        border-bottom: 1px solid $grey;
+        border-top: 1px solid $grey;
+        border-right: 1px solid $grey;
+
+        &:hover {
+            background: lighten($grey, 5%)!important;
+        }
     }
 }
