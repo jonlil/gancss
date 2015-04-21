@@ -22,9 +22,8 @@ Both components works the same way, you can either display the label inline or s
 </div>
 
 <div>
-    <label class="radio">
-        <input type="radio" name="radio" value="1" /> Radio 1
-    </label>
+    <input id="radio1" type="radio" name="radio1" />
+    <label for="radio1">Radio 1</label>
 </div>
 
 <div>
@@ -46,11 +45,18 @@ Both components works the same way, you can either display the label inline or s
 input[type="checkbox"],
 input[type="radio"] {
     cursor: pointer;
+    font-size: $font-size-medium;
 
-    // States
-    &:hover {
-        background: $dark-grey;
-    }
+}
+
+// Radio and checkbox outside label
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    cursor: pointer;
 }
 
 // Radio and checkbox inside label
