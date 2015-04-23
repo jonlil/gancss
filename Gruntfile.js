@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
         sass: {
             files: {
-                'build/gancss.css': 'src/gancss.sass'
+                'build/gancss.css': 'src/scss/gancss.scss'
             },
 
             prod: {
@@ -11,6 +11,25 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: '<%= sass.files %>'
+            }
+        },
+        watch: {
+            livereload: {
+                // Here we watch the files the sass task will compile to
+                // These files are sent to the live reload server after sass compiles to them
+                options: { livereload: true },
+                files: ['docs/**/*'],
+            },
+            css: {
+                files: 'src/scss/**/*.scss',
+                tasks: ['sass', 'autoprefixer', 'hologram'],
+                options: {
+                    spawn: false
+                }
+            },
+            hologram: {
+                files: ['doc_assets/**/*.html', 'src/**/*.md'],
+                tasks: 'hologram'
             }
         },
         autoprefixer: {
@@ -33,12 +52,31 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+        hologram: {
+            generate: {
+                options: {
+                    config: 'config.yml'
+                }
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    keepalive: true,
+                    base: 'docs'
+                }
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-hologram');
 
     grunt.registerTask('copy_fonts', function() {
         grunt.file.mkdir('build/fonts');
@@ -49,5 +87,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['build', 'watch']);
 
-    grunt.registerTask('build', ['sass:prod', 'autoprefixer:single_file', 'cssmin:prod', 'copy_fonts']);
+    grunt.registerTask('build', ['sass:prod', 'autoprefixer:single_file', 'cssmin:prod', 'copy_fonts', 'hologram']);
 };
