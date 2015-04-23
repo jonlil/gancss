@@ -33,6 +33,7 @@ a checkmark next to it. Add the class `.error` two display an error icon instead
     top: 0;
     right: 0.6rem;
     z-index: $z-large;
+    text-align: center;
 
     li {
         cursor: pointer;

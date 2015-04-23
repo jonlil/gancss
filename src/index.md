@@ -1,6 +1,6 @@
-
-
 # Introduction
+
+<p class="alert edit"><strong>Note!</strong> This is a living style guide and it's far from finished. Some sections may be incomplete.</p>
 
 The purpose of this guide is to provide a solid foundation for maintaining
 a consistent visual style and a high quality code base across all of our sites.
