@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+    <head>
+        
+            <title>GAN styleguide: Base</title>
+        
+        <link rel="stylesheet" href="/build/gancss.css">
+        <link rel="stylesheet" href="css/github.css">
+        <link rel="stylesheet" href="css/docs.css">
+        <link rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Source+Code+Pro">
+    </head>
+    
+        <body class="Base">
+    
+
+        <div class="site-wrap">
+
+            <header class="site-header clearfix">
+                <div class="logo">
+                    <a href="index.html">GAN Styleguide</a>
+                </div>
+                <nav class="site-nav">
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="base.html">Base</a></li>
+                        <li><a href="layout.html">Layout</a></li>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+
+                <div class="row">
+                    
+                        <h1 class="no-mar">Base</h1>
+                    
+                </div>
+
+                <section class="row box has-sidebar">
+
+                    <article class="col-8 styleguide-content"><h1 id="forms">Forms</h1>
+
+<p>All form components come in a few different variations. The
+standard component height is 35 pixels. Add a class of <code>.small</code>
+to make it 30 pixels instead.</p>
+
+<h2>Basic form example</h2>
+<div class="codeExample"><div class="exampleOutput"><div class="form-tooltip clearfix">
+    <label class="left" for="email">Email*</label>
+    <a href="#" tabindex="-1">
+        <span class="icon-info2"></span>
+        <span class="tooltip">Write the confirmation mail below.</span>
+    </a>
+</div>
+<input type="text" id="email" />
+
+<div class="legend">
+    <h3>
+        <strong>Divider</strong>
+    </h3>
+</div>
+
+<p class="small light-text">Choose if you want the fields for first name visible. The e-mail field is mandatory.</p>
+
+<label for="text_area">Text Area</label>
+<textarea id="text_area"></textarea>
+
+<div class="legend">
+    <h3>
+        <strong>Form settings</strong>
+    </h3>
+</div>
+
+<p class="small light-text">Use a custom landing page and write a custom text for the submit button.</p>
+
+<div class="row">
+    <div class="col-6">
+        <label for="next_url">Next URL</label>
+        <input type="text" id="next_url" />
+    </div>
+    <div class="col-6">
+        <label for="button_text">Button text</label>
+        <input type="text" id="button_text" />
+    </div>
+</div>
+
+
+<div class="row text-right">
+    <input class="btn primary" type="submit" value="Submit">
+</div>
+
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-tooltip clearfix"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"left"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email*<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-info2"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"tooltip"</span><span class="nt">&gt;</span>Write the confirmation mail below.<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"legend"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Divider<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"small light-text"</span><span class="nt">&gt;</span>Choose if you want the fields for first name visible. The e-mail field is mandatory.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text_area"</span><span class="nt">&gt;</span>Text Area<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"text_area"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"legend"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Form settings<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"small light-text"</span><span class="nt">&gt;</span>Use a custom landing page and write a custom text for the submit button.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"next_url"</span><span class="nt">&gt;</span>Next URL<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"next_url"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"button_text"</span><span class="nt">&gt;</span>Button text<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"button_text"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row text-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div></div></div>
+<h2 id="Checkboxes_and_radio_buttons">Checkboxes and radio buttons</h2>
+
+<p>We use native styling for both checkboxes and radio buttons to ensure usability across browsers.
+Both components works the same way, you can either display the label inline or stacked.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="row">
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="1" /> Radio 1
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="2" /> Radio 2
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" name="checkbox" value="3" /> Radio 3
+    </label>
+</div>
+
+<div>
+    <input id="radio1" type="radio" name="radio1" />
+    <label for="radio1">Radio 1</label>
+</div>
+
+<div>
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+
+<div class="row">
+    <label class="radio">
+        <input type="radio" name="radio" value="1" /> Radio 1
+    </label>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span> Radio 1
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="nt">/&gt;</span> Radio 2
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="nt">/&gt;</span> Radio 3
+    <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>Radio 1<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span> Radio 1
+    <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span> Radio 1
+    <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2 id="File_uploads">File uploads</h2>
+
+<p>The <code>&lt;input type=&quot;file&gt;&quot;</code> is styled with css to remove th ugly defaults.
+We use angular in the front end to display the name of the chosen file.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="file-upload-wrap btn primary">
+    <input type="file" id="file" class="file-upload-input">
+    <span>File upload</span>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"file-upload-wrap btn primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"file-upload-input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span&gt;</span>File upload<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2 id="Labels">Labels</h2>
+
+<p>Labels only comes in one style at the moment. We style the attribute and there&#39;s no classes to alter the look.</p>
+<div class="codeExample"><div class="exampleOutput"><label for="label">Label</label>
+<input type="text" id="label" />
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"label"</span> <span class="nt">/&gt;</span>
+</pre></div></div></div>
+<h2 id="Layout">Layout</h2>
+
+<p>Long form fields can quickly ge crowded and confusing, so we have added dividers to better
+separate sections from each other.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="legend">
+    <h3>
+        <strong>Divider</strong>
+    </h3>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"legend"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Divider<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2 id="Selects">Selects</h2>
+<div class="codeExample"><div class="exampleOutput"><label for="country">Country</label>
+<select id="country">
+    <optgroup label="Option Group 1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </optgroup>
+    <optgroup label="Option Group 2">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3" disabled>Disabled Option</option>
+    </optgroup>
+</select>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"country"</span><span class="nt">&gt;</span>Country<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"country"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Option Group 1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/optgroup&gt;</span>
+    <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Option Group 2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled Option<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/optgroup&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+</pre></div></div></div>
+<h2 id="Text_fields">Text fields</h2>
+<div class="codeExample"><div class="exampleOutput"><label for="input_text">Text input</label>
+<input type="text" id="input_text" />
+<label for="text_area">Text Area</label>
+<textarea id="text_area"></textarea>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input_text"</span><span class="nt">&gt;</span>Text input<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"input_text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"text_area"</span><span class="nt">&gt;</span>Text Area<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"text_area"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</pre></div></div></div>
+<h1 id="tables">Tables</h1>
+
+<p>Button styles can be applied to any element. Typically you&#39;ll want to
+use either a <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> element. Buttons next to each other
+is spaced out with the adjacent selector <code>.btn + .btn</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Simon.wallstrom@gmail.com</td>
+            <td>Simon</td>
+            <td>Wallström</td>
+        </tr>
+        <tr>
+            <td>Simon.wallstrom@gmail.com</td>
+            <td>Simon</td>
+            <td>Wallström</td>
+        </tr>
+        <tr>
+            <td>Simon.wallstrom@gmail.com</td>
+            <td>Simon</td>
+            <td>Wallström</td>
+        </tr>
+        <tr>
+            <td>Simon.wallstrom@gmail.com</td>
+            <td>Simon</td>
+            <td>Wallström</td>
+        </tr>
+        <tr>
+            <td>Simon.wallstrom@gmail.com</td>
+            <td>Simon</td>
+            <td>Wallström</td>
+        </tr>
+    </tbody>
+</table>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Email<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>First name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Last name<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon.wallstrom@gmail.com<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Wallström<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon.wallstrom@gmail.com<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Wallström<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon.wallstrom@gmail.com<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Wallström<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon.wallstrom@gmail.com<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Wallström<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon.wallstrom@gmail.com<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Simon<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Wallström<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div>
+<h1 id="typography">Typography</h1>
+
+<p>These are the heading sizes that you can use site wide.</p>
+<div class="codeExample"><div class="exampleOutput"><h1>Heading 1 32px</h1>
+<h2>Heading 2 26px</h2>
+<h3>Heading 3 22px</h3>
+<h4>Heading 4 18px</h4>
+<h5>Heading 5 16px</h5>
+<p>This is an example of our base font style 16px. Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Heading 1 32px<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Heading 2 26px<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Heading 3 22px<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Heading 4 18px<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Heading 5 16px<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;p&gt;</span>This is an example of our base font style 16px. Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div>                    </article> <!-- END styleguide-content -->
+
+                    
+
+                        <aside class="col-4 sidebar">
+
+                            
+                                <ul class="sidebar-nav">
+                                    
+                                        
+                                            <li><a class="pas" href="#forms">Forms</a></li>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            <li><a class="pas" href="#tables">Tables</a></li>
+                                        
+                                    
+                                        
+                                            <li><a class="pas" href="#typography">Typography</a></li>
+                                        
+                                    
+                                </ul>
+                            
+
+                        </aside>
+
+                    
+
+                </section> <!-- END has-sidebar -->
+
+                <footer class="text-center">
+                    <p>Documentation made using <a href="http://github.com/trulia/hologram">Hologram</a>
+                </footer>
+
+            </div> <!-- END container -->
+
+        </div> <!-- end site-wrap -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

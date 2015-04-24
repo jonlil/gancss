@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+    <head>
+        
+            <title>GAN styleguide: Overview</title>
+        
+        <link rel="stylesheet" href="/build/gancss.css">
+        <link rel="stylesheet" href="css/github.css">
+        <link rel="stylesheet" href="css/docs.css">
+        <link rel="stylesheet", type="text/css", href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Source+Code+Pro">
+    </head>
+    
+        <body class="overview">
+    
+
+        <div class="site-wrap">
+
+            <header class="site-header clearfix">
+                <div class="logo">
+                    <a href="index.html">GAN Styleguide</a>
+                </div>
+                <nav class="site-nav">
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="base.html">Base</a></li>
+                        <li><a href="layout.html">Layout</a></li>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+
+                <div class="row">
+                    
+                        <h1 class="no-mar">Overview</h1>
+                    
+                </div>
+
+                <section class="row box has-sidebar">
+
+                    <article class="col-8 styleguide-content"><h1>Introduction</h1>
+
+<p class="alert edit"><strong>Note!</strong> This is a living style guide and it's far from finished. Some sections may be incomplete.</p>
+
+<p>The purpose of this guide is to provide a solid foundation for maintaining
+a consistent visual style and a high quality code base across all of our sites.
+This page – The Overview – is where we keep our rules and guidelines for
+writing clean and effective CSS. The other pages – Base, Layout, Modules
+and Tools - is our pattern library divided into different sections.</p>
+<div class="codeBlock"><div class="highlight"><pre>  WHAT WE'LL COVER:
+
+- Quick Facts
+- Folder Architecture
+- File Layout
+- Usage
+- Documentation
+- Improvements
+</pre></div></div>
+<p>A quick note on browser support. We aim to target the last 2 versions of popular
+browsers. At the time of writing, that means IE 10 &amp; IE 11. Other target browsers
+automatically update which makes them a non-issue.</p>
+
+<h1>Quick Facts</h1>
+
+<ul class="with-bullet">
+    <li>`SCSS` is our preprocessor of choice.</li>
+    <li>We only serve one file in production.</li>
+    <li>Our source files consist of around 30 files.</li>
+    <li>We have around 2300 lines of css.</li>
+    <li>It weights in at 23kb.</li>
+    <li>We use `normalize.css` to even the playing field.</li>
+</ul>
+
+<h1>Folder Architecture</h1>
+
+<p>The folder structure is inspired by SMACCS approach to CSS. We do our best to keep each file short and sweet in order to improve readability and organization.</p>
+<div class="codeBlock"><div class="highlight"><pre>src/scss/
+|-- gancss.scss
+|-- base/
+|-- layout/
+|-- modules/
+|-- tools/
+</pre></div></div>
+<ul>
+<li><code>gancss.sccs</code> – This is where we import all of our files.</li>
+<li><code>base</code> – Here lives the element selectors such as forms, tables and typography.</li>
+<li><code>layout</code> – This folder contains major layout sections such as header, footer and grid.</li>
+<li><code>modules</code> – This is where we keep all our reusable chunks of code such as buttons and alerts.</li>
+<li><code>tools</code> – This folder holds our helper classes, mixins and our global settings.</li>
+</ul>
+
+<h1>File Layout</h1>
+
+<p>We try to stay organized and write consistent CSS, so we structure each file according to a set of rules.
+This is a simple example showing how every file should look:</p>
+<div class="codeBlock"><div class="highlight"><pre>/*doc
+---
+title: Alerts
+name: alerts
+category: Modules
+---
+
+Alerts can be used to display important messages with great contrast
+to draw the attention of the user. It comes in a few different colors.
+See examples below for available options.
+
+```html_example
+&lt;p class="alert success"&gt;This is an alert with a success message&lt;/p&gt;
+&lt;p class="alert error"&gt;This is an alert with an error message&lt;/p&gt;
+&lt;p class="alert edit"&gt;This is an longform alert with muted message.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
+```
+
+*/
+
+
+.alert {
+    color: $white;
+    padding: 7px 13px 6px;
+    font-size: $font-size-medium;
+    margin-bottom: $margin;
+    border-radius: $border-radius;
+    display: block;
+
+    &amp;.success { background: $green; }
+
+    &amp;.error { background: $red; }
+
+    &amp;.edit {
+        background: $base-grey;
+        color: $black;
+    }
+
+    // Remove link color in alert
+    a {
+        color: white;
+
+        &amp;.underline {
+            border-bottom: 1px dotted rgba(white, 0.5);
+        }
+    }
+}
+</pre></div></div>
+<p>Every file starts with a comment section. This is the part that automatically
+generates our style guide. Try to keep every file small and readable.</p>
+
+<h1>Usage</h1>
+
+<p>Coming soon...</p>
+
+<h1>Documentation</h1>
+
+<p>Coming soon...</p>
+
+<h1>Improvements</h1>
+
+<ul class="with-bullet">
+    <li><strong>Modularize all class names.</strong> For example, <code>.sidebar-nav</code>. This module could be placed anywhere so a better name is probably <code>.stacked-nav</code> since that's the main characteristics.</li>
+    <li><strong>Reduce number of nested element selectors.</strong> Instead of writing <code>.module > h2</code> give the h2 a class name.</li>
+    <li><strong>Start using scss-lint.</strong> A tool like this could probably help us enforce the rules and guidelines.</li>
+</ul>
+                    </article> <!-- END styleguide-content -->
+
+                    
+
+                        <aside class="col-4 sidebar">
+                            <ul class="sidebar-nav">
+                                    <li class="active"><a href="#introduction">Introduction</a></li>
+                                    <li><a href="#introduction">Quick facts</a></li>
+                                    <li><a href="#folder-architecture">Folder Architecture</a></li>
+                                    <li><a href="#file-layout">File Layout</a></li>
+                                    <li><a href="#file-layout">Usage</a></li>
+                                    <li><a href="#file-layout">Documentation</a></li>
+                                    <li><a href="#file-layout">Improvements</a></li>
+                            </ul>
+                        </aside>
+
+                    
+
+                </section> <!-- END has-sidebar -->
+
+                <footer class="text-center">
+                    <p>Documentation made using <a href="http://github.com/trulia/hologram">Hologram</a>
+                </footer>
+
+            </div> <!-- END container -->
+
+        </div> <!-- end site-wrap -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
