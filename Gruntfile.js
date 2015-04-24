@@ -68,6 +68,12 @@ module.exports = function(grunt) {
                     base: 'docs'
                 }
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'docs'
+            },
+            src: '**/*'
         }
     });
 
@@ -77,6 +83,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-hologram');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.registerTask('copy_fonts', function() {
         grunt.file.mkdir('build/fonts');
@@ -88,4 +95,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['build', 'watch']);
 
     grunt.registerTask('build', ['sass:prod', 'autoprefixer:single_file', 'cssmin:prod', 'copy_fonts', 'hologram']);
+
+    grunt.registerTask('deploy', ['gh-pages']);
 };

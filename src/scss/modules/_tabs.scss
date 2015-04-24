@@ -28,9 +28,6 @@ and scrambled it to make a type specimen book.
 
 .tab-container {
     margin: 0 0 ($margin*1.5);
-    background: white;
-    border: 1px solid $dark-grey;
-    border-radius: $border-radius;
     @include clearfix;
 
     li {
@@ -39,21 +36,36 @@ and scrambled it to make a type specimen book.
     }
 
     li a {
-        padding: 0.55rem 0 0.45rem;
+        height: $height;
+        line-height: $height;
         margin: 0;
-        font-weight: $bold;
-        color: $dark-grey;
+        font-weight: $semi-bold;
         text-align: center;
         display: block;
+        border: 1px solid $grey;
+        color: $black;
+        font-size: $font-size-medium;
 
         &:hover {
-            background: $light-grey;
+            background: $lighter-grey;
             color: $black;
         }
 
-        &.tabactive {
-            background: $dark-grey;
-            color: white;
+        &:active {
+            box-shadow: $box-shadow-inset;
         }
+
+        &.tabactive {
+            background: $base-grey;
+        }
+    }
+
+    li:first-child a {
+        border-right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    li:last-child a {
+        border-radius: 0 3px 3px 0;
     }
 }
